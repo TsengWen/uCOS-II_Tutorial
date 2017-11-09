@@ -15,7 +15,7 @@ void  BSP_Init (void)
 	
 	USART_Inits(USART1, USART_PinsPack_1, 115200);
 	USART_Puts(USART1, "\r\nuC/OS-II STM32F429ZI-DISC\r\n");
-	USART_Puts(USART1, "OSTaskCreate using parameter\r\n");
+	USART_Puts(USART1, "OSTaskCreateExt using parameter\r\n");
 	USART_Puts(USART1, "-----------------------------\r\n");
 }
 
