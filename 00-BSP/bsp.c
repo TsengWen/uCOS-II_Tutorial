@@ -12,10 +12,11 @@ void  BSP_Init (void)
 	//SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
 	SysTick_Config(SystemCoreClock / 100);
     BSP_LED_Init();
-	//BSP_USART_Init();
+	
 	USART_Inits(USART1, USART_PinsPack_1, 115200);
 	USART_Puts(USART1, "\r\nuC/OS-II STM32F429ZI-DISC\r\n");
-	//printf("\n\rUSART Printf Example: retarget the C library printf function to the USART\n\r");
+	USART_Puts(USART1, "OSTaskCreate using parameter\r\n");
+	USART_Puts(USART1, "-----------------------------\r\n");
 }
 
 
