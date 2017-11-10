@@ -16,6 +16,8 @@ int main(void)
 	OSInit();
 	BSP_Init();
 	
+	USART_Puts(USART1, "OSTaskCreate\r\n");
+	
 	OSTaskCreate(task_led_red, 0, &led_red_task_stk[LED_BLINK_STK_SIZE-1],LED_RED_PRIO);
 	OSTaskCreate(task_led_green, 0, &led_green_task_stk[LED_BLINK_STK_SIZE-1],LED_GREEN_PRIO);
 	

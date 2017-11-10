@@ -18,6 +18,9 @@ int main(void)
 	OSInit();
 	BSP_Init();
 	
+	
+	USART_Puts(USART1, "OSTaskCreate using parameter\r\n");
+	
 	/*task create using parameter */
 	OSTaskCreate(task_led_red, (void*)parameter, &led_red_task_stk[LED_BLINK_STK_SIZE-1],LED_RED_PRIO);
 	/*task create no using parameter */
